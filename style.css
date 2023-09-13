@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* COLORS */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* GRADIENT */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* NEUTRAL: TEXT */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* NEUTRAL: DIVIDERS */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  /* NEUTRAL */
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+.faq-section {
+  background-color: var(--white);
+  width: 900px;
+  height: 434px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  border-radius: 24px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.img {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-bg {
+  position: absolute;
+  width: 200%;
+  top: -270px;
+  left: -500px;
+}
+
+.img-illustration {
+  position: absolute;
+  top: 50px;
+  left: -80px;
+}
+
+.img-box {
+  position: absolute;
+  top: 185px;
+  left: -95px;
+  z-index: 100;
+}
+
+.faq__questions {
+  padding: 32px 48px 32px 0;
+}
+
+.heading-secondary {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.heading-tertiary {
+  font-weight: 400;
+  transition: all 0.1s;
+}
+
+.faq__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  animation: slideDown 0.3s;
+}
+
+.open {
+  display: flex;
+  animation: slideUp 0.3s;
+}
+
+.arrow {
+  transform: rotate(360deg);
+  transition: all 0.3s;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow-rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+
+.bold-text {
+  font-weight: 700 !important;
+  transition: all 0.3s;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
